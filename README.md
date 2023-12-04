@@ -5,10 +5,10 @@ To see the problems' text: [link](https://adventofcode.com/)
 
 ## Problems
 All the problems are divided into two parts. Solving the first half allows to solve the second one.
-* [One](https://adventofcode.com/2023/day/1)
-* [Two](https://adventofcode.com/2023/day/2)
-* [Three](https://adventofcode.com/2023/day/3)
-* [Four](https://adventofcode.com/2023/day/4)
+* [One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet)
+* [Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum)
+* [Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios)
+* [Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
 * [Five](https://adventofcode.com/2023/day/5)
 * [Six](https://adventofcode.com/2023/day/6)
 * [Seven](https://adventofcode.com/2023/day/7)
