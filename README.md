@@ -4,6 +4,7 @@ All the problems were solved using Java in a Intellij project with Gradle.
 To see the problems' text: [link](https://adventofcode.com/)
 
 ## Problems
+All the problems are divided into two parts. Solving the first half allows to solve the second one.
 * [One](https://adventofcode.com/2023/day/1)
 * [Two](https://adventofcode.com/2023/day/2)
 * [Three](https://adventofcode.com/2023/day/3)
