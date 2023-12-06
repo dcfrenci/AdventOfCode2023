@@ -3,6 +3,8 @@ All the problems were solved using Java in Intellij project with Gradle.
 
 To see the problems' text: [link](https://adventofcode.com/)
 
+To see the leaderboard: [link](https://adventofcode.com/2023/leaderboard/private/view/2667791)
+
 ## Problems
 All the problems are divided into day2 parts. Solving the first half allows to solve the second day1.
 * [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day1.java)

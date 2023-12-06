@@ -1,5 +1,9 @@
 package org.days;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,9 +27,7 @@ public class Day6 {
         long hold = 0;
         int counter = 0;
         while (hold <= time) {
-            if ((time - hold) * hold > distance) {
-                counter++;
-            }
+            if ((time - hold) * hold > distance) counter++;
             hold++;
         }
         return counter;
@@ -45,13 +47,16 @@ public class Day6 {
         return getWaysToWin(times.get(0), distances.get(0));
     }
 
-    public static void main(String[] args) {
-        List<String> stringInput = new ArrayList<>(List.of("Time:        53     83     72     88", "Distance:   333   1635   1289   1532"));
+    public static void main(String[] args) throws IOException {
+        URL url = Day4.class.getClassLoader().getResource("input/Day6.txt");
+        assert url != null;
+        InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        List<String> input = bufferedReader.lines().toList();
         Day6 day6 = new Day6();
-        int ret = day6.makeRaces(stringInput);
+        int ret = day6.makeRaces(input);
         System.out.println("The return value first part: " + ret);
-
-        long retTwo = day6.makeOneRace(stringInput);
+        long retTwo = day6.makeOneRace(input);
         System.out.println("The return value second part: " + retTwo);
     }
 }
