@@ -1,7 +1,6 @@
 package org.days;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
@@ -9,7 +8,7 @@ import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class One {
+public class Day1 {
     public Map<Integer, Integer> findNumberName(String string, boolean normal) {
         List<String> numberName = new ArrayList<>(List.of("one", "two", "three", "four", "five", "six", "seven", "eight", "nine"));
         Map<Integer, Integer> numberPosition = new HashMap<>();
@@ -85,12 +84,12 @@ public class One {
     }
 
     public static void main(String[] args) throws URISyntaxException, IOException {
-        One one = new One();
-        URL url = One.class.getClassLoader().getResource("input/One.txt");
+        Day1 day1 = new Day1();
+        URL url = Day1.class.getClassLoader().getResource("input/One.txt");
         assert url != null;
         InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        int ret = one.allTranslation(bufferedReader.lines().toList());
+        int ret = day1.allTranslation(bufferedReader.lines().toList());
         System.out.println("This is the return value: " + ret);
     }
 }

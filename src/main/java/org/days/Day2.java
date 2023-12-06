@@ -3,7 +3,7 @@ package org.days;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Two {
+public class Day2 {
     public int StringToInt(String string) {
         int num = 0;
         for (char c: string.toCharArray()) {
@@ -73,8 +73,8 @@ public class Two {
     }
 
     public static void main(String[] args) {
-        Two two = new Two();
-        int ret = two.divideLinesTwo("Game 1: 2 green, 12 blue; 6 red, 6 blue; 8 blue, 5 green, 5 red; 5 green, 13 blue; 3 green, 7 red, 10 blue; 13 blue, 8 red\n" +
+        Day2 day2 = new Day2();
+        int ret = day2.divideLinesTwo("Game 1: 2 green, 12 blue; 6 red, 6 blue; 8 blue, 5 green, 5 red; 5 green, 13 blue; 3 green, 7 red, 10 blue; 13 blue, 8 red\n" +
                 "Game 2: 1 green, 7 red; 1 green, 9 red, 3 blue; 4 blue, 5 red\n" +
                 "Game 3: 2 red, 2 blue, 6 green; 1 blue, 2 red, 2 green; 3 blue, 3 green\n" +
                 "Game 4: 8 green, 16 red, 7 blue; 1 red, 7 blue, 12 green; 8 green, 14 red, 1 blue; 6 blue, 9 green, 12 red; 9 red, 2 green; 8 red, 7 blue, 17 green\n" +

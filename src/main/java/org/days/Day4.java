@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class Four {
+public class Day4 {
     public List<Integer> numbers(String string) {
         List<Integer> numbers = new ArrayList<>();
         StringBuilder number = new StringBuilder();
@@ -61,15 +60,15 @@ public class Four {
         return ret;
     }
     public static void main(String[] args) throws IOException {
-        Four four = new Four();
-        URL url = Four.class.getClassLoader().getResource("input/Four.txt");
+        Day4 day4 = new Day4();
+        URL url = Day4.class.getClassLoader().getResource("input/Four.txt");
         assert url != null;
         InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         List<String> input = bufferedReader.lines().toList();
-        long ret = four.divideLines(input);
+        long ret = day4.divideLines(input);
         System.out.println("Return value part one:  " + ret);
-        long retTwo = four.countAllCards(input);
+        long retTwo = day4.countAllCards(input);
         System.out.println("Return value part two: " + retTwo);
     }
 }

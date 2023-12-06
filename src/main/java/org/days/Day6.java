@@ -3,7 +3,7 @@ package org.days;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Six {
+public class Day6 {
     private List<Long> numbersLong(String string) {
         List<Long> numbers = new ArrayList<>();
         StringBuilder number = new StringBuilder();
@@ -47,11 +47,11 @@ public class Six {
 
     public static void main(String[] args) {
         List<String> stringInput = new ArrayList<>(List.of("Time:        53     83     72     88", "Distance:   333   1635   1289   1532"));
-        Six six = new Six();
-        int ret = six.makeRaces(stringInput);
+        Day6 day6 = new Day6();
+        int ret = day6.makeRaces(stringInput);
         System.out.println("The return value first part: " + ret);
 
-        long retTwo = six.makeOneRace(stringInput);
+        long retTwo = day6.makeOneRace(stringInput);
         System.out.println("The return value second part: " + retTwo);
     }
 }

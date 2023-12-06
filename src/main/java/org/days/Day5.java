@@ -2,7 +2,7 @@ package org.days;
 
 import java.util.*;
 
-public class Five {
+public class Day5 {
     private List<Long> numbers(String string) {
         List<Long> numbers = new ArrayList<>();
         StringBuilder number = new StringBuilder();
@@ -327,8 +327,8 @@ public class Five {
                 3269483311 1986683356 82580145
                 237692106 1544133532 42481561
                 3696531962 2419093833 100491231""";
-        Five five = new Five();
-        long ret = five.lowestLocation(input);
+        Day5 day5 = new Day5();
+        long ret = day5.lowestLocation(input);
         System.out.println("Return value part one: " + ret);
     }
 }

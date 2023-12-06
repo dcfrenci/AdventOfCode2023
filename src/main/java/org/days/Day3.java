@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class Three {
+public class Day3 {
     public List<String> findNumbers(String string) {
         List<String> numbers = new ArrayList<>();
         StringBuilder number = new StringBuilder();
@@ -178,17 +178,17 @@ public class Three {
     }
 
     public static void main(String[] args) throws IOException {
-        Three three = new Three();
-        URL url = Three.class.getClassLoader().getResource("input/Three.txt");
+        Day3 day3 = new Day3();
+        URL url = Day3.class.getClassLoader().getResource("input/Three.txt");
         assert url != null;
         InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         List<String> input = bufferedReader.lines().toList();
         String stringBuilder = input.stream().map(str -> str + "\n").collect(Collectors.joining());
 
-        int ret = three.numbers(input);
+        int ret = day3.numbers(input);
         System.out.println("Return value part one: " + ret);
-        long ret2 = three.gears(stringBuilder);
+        long ret2 = day3.gears(stringBuilder);
         System.out.println("Return value part two: " + ret2);
     }
 }
