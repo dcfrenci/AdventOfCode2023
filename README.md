@@ -5,15 +5,15 @@ To see the problems' text: [link](https://adventofcode.com/)
 
 ## Problems
 All the problems are divided into two parts. Solving the first half allows to solve the second one.
-* [One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet)
-* [Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum)
-* [Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios)
-* [Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
-* [Five](https://adventofcode.com/2023/day/5)
-* [Six](https://adventofcode.com/2023/day/6)
-* [Seven](https://adventofcode.com/2023/day/7)
-* [Eight](https://adventofcode.com/2023/day/8)
-* [Nine](https://adventofcode.com/2023/day/9)
+* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet)
+* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum)
+* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios)
+* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
+* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-four---if-you-give-a-seed-a-fertilizer)
+* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-four---wait-for-it)
+* [Day Seven](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
+* [Day Eight](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
+* [Day Nine](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards)
 
 # Day one - Trebuchet?!
 --- Part One ---
