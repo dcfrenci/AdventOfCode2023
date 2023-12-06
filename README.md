@@ -15,7 +15,7 @@ All the problems are divided into day2 parts. Solving the first half allows to s
 * [Day Eight](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)
 * [Day Nine](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)
 
-# Day day1 - Trebuchet?!
+# Day One - Trebuchet?!
 --- Part One ---
 
 Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.
@@ -62,7 +62,7 @@ In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Addi
 
 What is the sum of all the calibration values?
 
-# Day day2 - Cube Conundrum
+# Day Two - Cube Conundrum
 
 --- Part One ---
 
@@ -251,7 +251,7 @@ Once all the originals and copies have been processed, you end up with 1 instanc
 
 Process all the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?
 
-# Day day5 - If You Give A Seed A Fertilizer
+# Day Five - If You Give A Seed A Fertilizer
 
 --- Part One ---
 
@@ -372,7 +372,7 @@ In the above example, the lowest location number can be obtained from seed numbe
 
 Consider all the initial seed numbers listed in the ranges on the first line of the almanac. What is the lowest location number that corresponds to any of the initial seed numbers?
 
-# Day day6 - Wait For It
+# Day Six - Wait For It
 
 --- Part One ---
 
