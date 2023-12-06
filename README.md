@@ -5,12 +5,12 @@ To see the problems' text: [link](https://adventofcode.com/)
 
 ## Problems
 All the problems are divided into day2 parts. Solving the first half allows to solve the second day1.
-* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-day1---trebuchet) [solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day1.java)
-* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-day2---cube-conundrum)[solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day2.java)
-* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-day3---gear-ratios)[solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day3.java)
-* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)[solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day4.java)
-* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-day5---if-you-give-a-seed-a-fertilizer)[solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day5.java)
-* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-day6---wait-for-it)[solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day6.java)
+* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-day1---trebuchet) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day1.java)
+* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-day2---cube-conundrum) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day2.java)
+* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-day3---gear-ratios) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day3.java)
+* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day4.java)
+* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-day5---if-you-give-a-seed-a-fertilizer) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day5.java)
+* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-day6---wait-for-it) [get solution](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day6.java)
 * [Day Seven](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)
 * [Day Eight](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)
 * [Day Nine](https://github.com/dcfrenci/AdventOfCode2023#day-day4---scratchcards)
