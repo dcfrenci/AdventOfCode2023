@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Day7 {
     private List<Integer> numbers(String string) {
@@ -38,7 +37,6 @@ public class Day7 {
         for (Character c : value) {
             strength.put(c, 0);
         }
-        int ret = 0;
         for (Character c : hand.toCharArray()) {
             strength.put(c, strength.get(c) + 1);
         }
