@@ -107,7 +107,6 @@ public class Day7 {
         int strength = 1;
         for (Map.Entry<Integer, List<String>> elem : sorted.entrySet()) {
             for (String string : elem.getValue()) {
-                System.out.println(string + " + " + elem.getKey());
                 ret += (long) strength * numbers(string.substring(string.indexOf(' '))).get(0);
                 strength++;
             }
