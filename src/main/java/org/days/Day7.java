@@ -63,63 +63,40 @@ public class Day7 {
         }
         return 1;
     }
-    private String transformToMap(String handOne, String handTwo) {
-        List<Character> value = new ArrayList<>(List.of('2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q','K', 'A'));
-        /*Map<Character, Integer> strength = new HashMap<>();
-        int val = 0;
-        for (Character c : value) {
-            strength.put(c, val);
-            val++;
-        }
-        int ret = 0;
-        for (Character c : hand.toCharArray()) {
-            ret += strength.get(c);
-        }
-        return ret;*/
+    private int transformToMap(String handOne, String handTwo) {
         for (int i = 0; i < handOne.length(); i++) {
-            if (toCardValue(handOne.charAt(i)) > toCardValue(handTwo.charAt(i))) return handOne;
-            if (toCardValue(handOne.charAt(i)) < toCardValue(handTwo.charAt(i))) return handTwo;
+            if (toCardValue(handOne.charAt(i)) > toCardValue(handTwo.charAt(i))) return 1;
+            if (toCardValue(handOne.charAt(i)) < toCardValue(handTwo.charAt(i))) return -1;
         }
-        return handOne;
+        return 0;
     }
 
     private long divideLines(List<String> stringList) {
         Map<String, Integer> hands = new HashMap<>();
-
         for (String line : stringList) {
-            //hands.put(line, transformToMap(line.substring(0, line.indexOf(' '))));
             hands.put(line, checkCombination(line.substring(0, line.indexOf(' '))));
         }
+
         Map<Integer, List<String>> sorted = new HashMap<>();
         for (Map.Entry<String, Integer> elem : hands.entrySet()) {
             if (sorted.containsKey(elem.getValue())) {
-                List<String> order = new ArrayList<>();
-                for (String str : sorted.get(elem.getValue())) {
-                    if (elem.getKey().compareTo(transformToMap(elem.getKey(), str)) == 0) {
-                        order.add(elem.getKey());
-                        order.add(str);
-                    }
-                }
-                sorted.put(elem.getValue(), order);
+                List<String> order = new ArrayList<>(sorted.get(elem.getValue()));
+                order.add(elem.getKey());
+                sorted.put(elem.getValue(), order.stream().sorted(this::transformToMap).toList());
             } else {
-                Map.Entry<String, Integer> [] val = new Map.Entry[1];
-                val[0] = elem;
-                sorted.put(elem.getValue(), val);
+                List<String> order = new ArrayList<>();
+                order.add(elem.getKey());
+                sorted.put(elem.getValue(), order);
             }
         }
-        for (Map.Entry<Integer, Map.Entry<String, Integer>>)
-
-
-        List<String> bids;
-        bids = hands.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue)).map(Map.Entry::getKey).collect(Collectors.toList());
-        //hands.entrySet().stream().sorted((elem1, elem2) -> elem1.getValue() > elem2.getValue() ? 1 : 0)
-
-        // .collect(Collectors.co)
 
         long ret = 0;
-        for (int i = 0; i < bids.size(); i++) {
-            System.out.println("Value: " + numbers(bids.get(i).substring(bids.get(i).indexOf(' '))).get(0));
-            ret += (long) numbers(bids.get(i).substring(bids.get(i).indexOf(' '))).get(0) * (i + 1);
+        int strength = 1;
+        for (Map.Entry<Integer, List<String>> elem : sorted.entrySet()) {
+            for (String string : elem.getValue()) {
+                ret += (long) strength * numbers(string.substring(string.indexOf(' '))).get(0);
+                strength++;
+            }
         }
         return ret;
     }
