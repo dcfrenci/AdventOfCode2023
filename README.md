@@ -17,7 +17,10 @@ All the problems are divided into day2 parts. Solving the first half allows to s
 * [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day8.java)
 * [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day9.java)
 
-# Day One - Trebuchet?!
+# Day One - Trebuchet?! <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
+
+
+
 --- Part One ---
 
 Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.
@@ -64,7 +67,7 @@ In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Addi
 
 What is the sum of all the calibration values?
 
-# Day Two - Cube Conundrum
+# Day Two - Cube Conundrum <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -121,7 +124,7 @@ The power of a set of cubes is equal to the numbers of red, green, and blue cube
 
 For each game, find the minimum set of cubes that must have been present. What is the sum of the power of these sets?
 
-# Day Three - Gear Ratios
+# Day Three - Gear Ratios <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -183,7 +186,7 @@ In this schematic, there are day2 gears. The first is in the top left; it has pa
 
 What is the sum of all the gear ratios in your engine schematic?
 
-# Day Four - Scratchcards
+# Day Four - Scratchcards <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -253,7 +256,7 @@ Once all the originals and copies have been processed, you end up with 1 instanc
 
 Process all the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?
 
-# Day Five - If You Give A Seed A Fertilizer
+# Day Five - If You Give A Seed A Fertilizer <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -374,7 +377,7 @@ In the above example, the lowest location number can be obtained from seed numbe
 
 Consider all the initial seed numbers listed in the ranges on the first line of the almanac. What is the lowest location number that corresponds to any of the initial seed numbers?
 
-# Day Six - Wait For It
+# Day Six - Wait For It <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -444,7 +447,7 @@ Now, you have to figure out how many ways there are to win this single race. In 
 
 How many ways can you beat the record in this day1 much longer race?
 
-# Day Seven - Camel Cards
+# Day Seven - Camel Cards <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -530,7 +533,7 @@ With the new joker rule, the total winnings in this example are 5905.
 
 Using the new joker rule, find the rank of every hand in your set. What are the new total winnings?
 
-# Day Eight - Haunted Wasteland
+# Day Eight - Haunted Wasteland <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
@@ -607,7 +610,7 @@ So, in this example, you end up entirely on nodes that end in Z after 6 steps.
 
 Simultaneously start on every node that ends with A. How many steps does it take before you're only on nodes that end with Z?
 
-# Day Nine - Mirage Maintenance
+# Day Nine - Mirage Maintenance <button name="button" onclick="https://github.com/dcfrenci/AdventOfCode2023/tree/master#adventofcode2023" style="background-color: grey; border-radius: 7px; border: none; float: right; position:relative; top: 13px">Top page</button>
 
 --- Part One ---
 
