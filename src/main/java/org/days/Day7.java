@@ -102,7 +102,6 @@ public class Day7 {
                 sorted.put(elem.getValue(), order);
             }
         }
-
         long ret = 0;
         int strength = 1;
         for (Map.Entry<Integer, List<String>> elem : sorted.entrySet()) {
