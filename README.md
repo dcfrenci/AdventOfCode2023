@@ -13,15 +13,15 @@ You don't need a computer science background to participate - just a little prog
 
 ## Problems
 All the problems are divided into two parts. Solving the first half allows to solve the second part.
-* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day1.java)
-* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day2.java)
-* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day3.java)
-* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day4.java)
-* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-five---if-you-give-a-seed-a-fertilizer) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day5.java)
-* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-six---wait-for-it) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day6.java)
-* [Day Seven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day7.java)
-* [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day8.java)
-* [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day9.java)
+* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day1.java)
+* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day2.java)
+* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day3.java)
+* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day4.java)
+* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-five---if-you-give-a-seed-a-fertilizer) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day5.java)
+* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-six---wait-for-it) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day6.java)
+* [Day Seven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day7.java)
+* [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day8.java)
+* [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day9.java)
 
 ### Day One - Trebuchet?! 
 
