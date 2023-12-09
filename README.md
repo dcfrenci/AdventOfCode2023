@@ -13,9 +13,9 @@ All the problems are divided into day2 parts. Solving the first half allows to s
 * [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day4.java)
 * [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-five---if-you-give-a-seed-a-fertilizer) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day5.java)
 * [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-six---wait-for-it) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day6.java)
-* [Day Seven]()
-* [Day Eight]()
-* [Day Nine]()
+* [Day Seven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day7.java)
+* [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day8.java)
+* [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/org/days/Day9.java)
 
 # Day One - Trebuchet?!
 --- Part One ---
