@@ -9,7 +9,7 @@ To see the leaderboard: [link](https://adventofcode.com/2023/leaderboard/private
 
 Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.
 
-You don't need a computer science background to participate - just a little programming knowledge and some problem solving skills will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
+You don't need a computer science background to participate - just a little programming knowledge and some problem-solving skills will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
 
 ## Problems
 All the problems are divided into two parts. Solving the first half allows to solve the second part.
@@ -22,6 +22,8 @@ All the problems are divided into two parts. Solving the first half allows to so
 * [Day Seven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day7.java)
 * [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day8.java)
 * [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day9.java)
+* [Day Ten](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-ten---pipe-maze) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day10.java)
+* [Day Eleven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eleven---cosmic-expantion) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day11.java)
 
 ### Day One - Trebuchet?! 
 
@@ -52,7 +54,7 @@ Consider your entire calibration document. What is the sum of all the calibratio
 
 --- Part Two ---
 
-Your calculation isn't quite right. It looks like some of the digits are actually spelled out with letters: day1, day2, day3, day4, day5, day6, seven, eight, and nine also count as valid "digits".
+Your calculation isn't quite right. It looks like some digits are actually spelled out with letters: day1, day2, day3, day4, day5, day6, seven, eight, and nine also count as valid "digits".
 
 Equipped with this new information, you now need to find the real first and last digit on each line.
 
@@ -138,7 +140,7 @@ It doesn't take long to find the gondolas, but there seems to be a problem: they
 
 "Aah!"
 
-You turn around to see a slightly-greasy Elf with a wrench and a look of surprise. "Sorry, I wasn't expecting anyone! The gondola lift isn't working right now; it'll still be a while before I can fix it." You offer to help.
+You turn around to see a slightly-greasy Elf with a wrench and a look of surprise. "Sorry, I wasn't expecting anyone! The gondola lift isn't working right now; it'll still be awhile before I can fix it." You offer to help.
 
 The engineer explains that an engine part seems to be missing from the engine, but nobody can figure out which day1. If you can add up all the part numbers in the engine schematic, it should be easy to work out which part is missing.
 
@@ -735,3 +737,358 @@ Adding the new values on the left side of each sequence from bottom to top event
 Doing this for the remaining example data above results in previous values of -3 for the first history and 0 for the second history. Adding all three new values together produces 2.
 
 Analyze your OASIS report again, this time extrapolating the previous value for each history. What is the sum of these extrapolated values?
+
+### Day Ten - Pipe Maze 
+
+--- Part One ---
+
+You use the hang glider to ride the hot air from Desert Island all the way up to the floating metal island. This island is surprisingly cold and there definitely aren't any thermals to glide on, so you leave your hang glider behind.
+
+You wander around for a while, but you don't find any people or animals. However, you do occasionally find signposts labeled "Hot Springs" pointing in a seemingly consistent direction; maybe you can find someone at the hot springs and ask them where the desert-machine parts are made.
+
+The landscape here is alien; even the flowers and trees are made of metal. As you stop to admire some metal grass, you notice something metallic scurry away in your peripheral vision and jump into a big pipe! It didn't look like any animal you've ever seen; if you want a better look, you'll need to get ahead of it.
+
+Scanning the area, you discover that the entire field you're standing on is densely packed with pipes; it was hard to tell at first because they're the same metallic silver color as the "ground". You make a quick sketch of all the surface pipes you can see (your puzzle input).
+
+The pipes are arranged in a two-dimensional grid of tiles:
+
+* | is a vertical pipe connecting north and south.
+* - is a horizontal pipe connecting east and west.
+* L is a 90-degree bend connecting north and east.
+* J is a 90-degree bend connecting north and west. 
+* 7 is a 90-degree bend connecting south and west. 
+* F is a 90-degree bend connecting south and east. 
+* . is ground; there is no pipe in this tile. 
+* S is the starting position of the animal; there is a pipe on this tile, but your sketch doesn't show what shape the pipe has.
+
+Based on the acoustics of the animal's scurrying, you're confident the pipe that contains the animal is one large, continuous loop.
+
+For example, here is a square loop of pipe:
+
+```
+.....
+.F-7.
+.|.|.
+.L-J.
+.....
+```
+
+If the animal had entered this loop in the northwest corner, the sketch would instead look like this:
+
+```
+.....
+.S-7.
+.|.|.
+.L-J.
+.....
+```
+
+In the above diagram, the S tile is still a 90-degree F bend: you can tell because of how the adjacent pipes connect to it.
+
+Unfortunately, there are also many pipes that aren't connected to the loop! This sketch shows the same loop as above:
+
+```
+-L|F7
+7S-7|
+L|7||
+-L-J|
+L|-JF
+```
+
+In the above diagram, you can still figure out which pipes form the main loop: they're the ones connected to S, pipes those pipes connect to, pipes those pipes connect to, and so on. Every pipe in the main loop connects to its two neighbors (including S, which will have exactly two pipes connecting to it, and which is assumed to connect back to those two pipes).
+
+Here is a sketch that contains a slightly more complex main loop:
+
+```
+..F7.
+.FJ|.
+SJ.L7
+|F--J
+LJ...
+```
+
+Here's the same example sketch with the extra, non-main-loop pipe tiles also shown:
+
+```
+7-F7-
+.FJ|7
+SJLL7
+|F--J
+LJ.LJ
+```
+
+If you want to get out ahead of the animal, you should find the tile in the loop that is farthest from the starting position. Because the animal is in the pipe, it doesn't make sense to measure this by direct distance. Instead, you need to find the tile that would take the longest number of steps along the loop to reach from the starting point - regardless of which way around the loop the animal went.
+
+In the first example with the square loop:
+
+```
+.....
+.S-7.
+.|.|.
+.L-J.
+.....
+```
+
+You can count the distance each tile in the loop is from the starting point like this:
+
+```
+.....
+.012.
+.1.3.
+.234.
+.....
+```
+
+In this example, the farthest point from the start is 4 steps away.
+
+Here's the more complex loop again:
+
+```
+..F7.
+.FJ|.
+SJ.L7
+|F--J
+LJ...
+```
+
+Here are the distances for each tile on that loop:
+
+```
+..45.
+.236.
+01.78
+14567
+23...
+```
+Find the single giant loop starting at S. How many steps along the loop does it take to get from the starting position to the point farthest from the starting position?
+
+--- Part Two ---
+You quickly reach the farthest point of the loop, but the animal never emerges. Maybe its nest is within the area enclosed by the loop?
+
+To determine whether it's even worth taking the time to search for such a nest, you should calculate how many tiles are contained within the loop. For example:
+
+```
+...........
+.S-------7.
+.|F-----7|.
+.||.....||.
+.||.....||.
+.|L-7.F-J|.
+.|..|.|..|.
+.L--J.L--J.
+...........
+```
+
+The above loop encloses merely four tiles - the two pairs of . in the southwest and southeast (marked I below). The middle . tiles (marked O below) are not in the loop. Here is the same loop again with those regions marked:
+
+```
+...........
+.S-------7.
+.|F-----7|.
+.||OOOOO||.
+.||OOOOO||.
+.|L-7OF-J|.
+.|II|O|II|.
+.L--JOL--J.
+.....O.....
+```
+
+In fact, there doesn't even need to be a full tile path to the outside for tiles to count as outside the loop - squeezing between pipes is also allowed! Here, I is still within the loop and O is still outside the loop:
+
+```
+..........
+.S------7.
+.|F----7|.
+.||OOOO||.
+.||OOOO||.
+.|L-7F-J|.
+.|II||II|.
+.L--JL--J.
+..........
+```
+
+In both of the above examples, 4 tiles are enclosed by the loop.
+
+Here's a larger example:
+
+```
+.F----7F7F7F7F-7....
+.|F--7||||||||FJ....
+.||.FJ||||||||L7....
+FJL7L7LJLJ||LJ.L-7..
+L--J.L7...LJS7F-7L7.
+....F-J..F7FJ|L7L7L7
+....L7.F7||L7|.L7L7|
+.....|FJLJ|FJ|F7|.LJ
+....FJL-7.||.||||...
+....L---J.LJ.LJLJ...
+```
+
+The above sketch has many random bits of ground, some of which are in the loop (I) and some of which are outside it (O):
+
+```
+OF----7F7F7F7F-7OOOO
+O|F--7||||||||FJOOOO
+O||OFJ||||||||L7OOOO
+FJL7L7LJLJ||LJIL-7OO
+L--JOL7IIILJS7F-7L7O
+OOOOF-JIIF7FJ|L7L7L7
+OOOOL7IF7||L7|IL7L7|
+OOOOO|FJLJ|FJ|F7|OLJ
+OOOOFJL-7O||O||||OOO
+OOOOL---JOLJOLJLJOOO
+```
+
+In this larger example, 8 tiles are enclosed by the loop.
+
+Any tile that isn't part of the main loop can count as being enclosed by the loop. Here's another example with many bits of junk pipe lying around that aren't connected to the main loop at all:
+
+```
+FF7FSF7F7F7F7F7F---7
+L|LJ||||||||||||F--J
+FL-7LJLJ||||||LJL-77
+F--JF--7||LJLJ7F7FJ-
+L---JF-JLJ.||-FJLJJ7
+|F|F-JF---7F7-L7L|7|
+|FFJF7L7F-JF7|JL---7
+7-L-JL7||F7|L7F-7F7|
+L.L7LFJ|||||FJL7||LJ
+L7JLJL-JLJLJL--JLJ.L
+```
+
+Here are just the tiles that are enclosed by the loop marked with I:
+
+```
+FF7FSF7F7F7F7F7F---7
+L|LJ||||||||||||F--J
+FL-7LJLJ||||||LJL-77
+F--JF--7||LJLJIF7FJ-
+L---JF-JLJIIIIFJLJJ7
+|F|F-JF---7IIIL7L|7|
+|FFJF7L7F-JF7IIL---7
+7-L-JL7||F7|L7F-7F7|
+L.L7LFJ|||||FJL7||LJ
+L7JLJL-JLJLJL--JLJ.L
+```
+
+In this last example, 10 tiles are enclosed by the loop.
+
+Figure out whether you have time to search for the nest by calculating the area within the loop. How many tiles are enclosed by the loop?
+
+### Day Eleven - Cosmic Expansion
+
+--- Part One ---
+
+You continue following signs for "Hot Springs" and eventually come across an observatory. The Elf within turns out to be a researcher studying cosmic expansion using the giant telescope here.
+
+He doesn't know anything about the missing machine parts; he's only visiting for this research project. However, he confirms that the hot springs are the next-closest area likely to have people; he'll even take you straight there once he's done with today's observation analysis.
+
+Maybe you can help him with the analysis to speed things up?
+
+The researcher has collected a bunch of data and compiled the data into a single giant image (your puzzle input). The image includes empty space (.) and galaxies (#). For example:
+
+```
+...#......
+.......#..
+#.........
+..........
+......#...
+.#........
+.........#
+..........
+.......#..
+#...#.....
+```
+
+The researcher is trying to figure out the sum of the lengths of the shortest path between every pair of galaxies. However, there's a catch: the universe expanded in the time it took the light from those galaxies to reach the observatory.
+
+Due to something involving gravitational effects, only some space expands. In fact, the result is that any rows or columns that contain no galaxies should all actually be twice as big.
+
+In the above example, three columns and two rows contain no galaxies:
+
+```
+   v  v  v
+ ...#......
+ .......#..
+ #.........
+>..........<
+ ......#...
+ .#........
+ .........#
+>..........<
+ .......#..
+ #...#.....
+   ^  ^  ^
+```
+
+These rows and columns need to be twice as big; the result of cosmic expansion therefore looks like this:
+
+```
+....#........
+.........#...
+#............
+.............
+.............
+........#....
+.#...........
+............#
+.............
+.............
+.........#...
+#....#.......
+```
+
+Equipped with this expanded universe, the shortest path between every pair of galaxies can be found. It can help to assign every galaxy a unique number:
+
+```
+....1........
+.........2...
+3............
+.............
+.............
+........4....
+.5...........
+............6
+.............
+.............
+.........7...
+8....9.......
+```
+
+In these 9 galaxies, there are 36 pairs. Only count each pair once; order within the pair doesn't matter. For each pair, find any shortest path between the two galaxies using only steps that move up, down, left, or right exactly one . or # at a time. (The shortest path between two galaxies is allowed to pass through another galaxy.)
+
+For example, here is one of the shortest paths between galaxies 5 and 9:
+
+```
+....1........
+.........2...
+3............
+.............
+.............
+........4....
+.5...........
+.##.........6
+..##.........
+...##........
+....##...7...
+8....9.......
+```
+
+This path has length 9 because it takes a minimum of nine steps to get from galaxy 5 to galaxy 9 (the eight locations marked # plus the step onto galaxy 9 itself). Here are some other example of the shortest path lengths:
+
+Between galaxy 1 and galaxy 7: 15
+Between galaxy 3 and galaxy 6: 17
+Between galaxy 8 and galaxy 9: 5
+In this example, after expanding the universe, the sum of the shortest path between all 36 pairs of galaxies is 374.
+
+Expand the universe, then find the length of the shortest path between every pair of galaxies. What is the sum of these lengths?
+
+--- Part Two ---
+
+The galaxies are much older (and thus much farther apart) than the researcher initially estimated.
+
+Now, instead of the expansion you did before, make each empty row or column one million times larger. That is, each empty row should be replaced with 1000000 empty rows, and each empty column should be replaced with 1000000 empty columns.
+
+(In the example above, if each empty row or column were merely 10 times larger, the sum of the shortest paths between every pair of galaxies would be 1030. If each empty row or column were merely 100 times larger, the sum of the shortest paths between every pair of galaxies would be 8410. However, your universe will need to expand far beyond these values.)
+
+Starting with the same initial image, expand the universe according to these new rules, then find the length of the shortest path between every pair of galaxies. What is the sum of these lengths?
