@@ -23,7 +23,7 @@ All the problems are divided into two parts. Solving the first half allows to so
 * [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day8.java)
 * [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day9.java)
 * [Day Ten](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-ten---pipe-maze) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day10.java)
-* [Day Eleven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eleven---cosmic-expantion) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day11.java)
+* [Day Eleven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eleven---cosmic-expansion) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day11.java)
 
 ### Day One - Trebuchet?! 
 
