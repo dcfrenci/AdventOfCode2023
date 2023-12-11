@@ -41,6 +41,81 @@ public class Day10 {
         }
         System.out.println("enclosed: " + counter);
     }
+
+    private static class Pair {
+        private Integer line;
+        private Integer index;
+        public Pair(Integer line, Integer index) {
+            this.line = line;
+            this.index = index;
+        }
+        public Integer getLine() {
+            return line;
+        }
+        public Integer getIndex() {
+            return index;
+        }
+
+    }
+    public List<Pair> addPair(List<Pair> list, Pair pair) {
+        list.add(pair);
+        return list;
+    }
+
+    private List<Pair> calculate(char character, Map<String, Integer> position, Map<Integer, Map<Integer, Character>> charMap, List<Pair> taken) {
+        List<Pair> linePlus;
+        List<Pair> lineLess;
+        List<Pair> indexPlus;
+        List<Pair> indexLess;
+        try {
+            linePlus = calculate(charMap.get(position.get("line") + 1).get(position.get("index")), Map.of("line", position.get("line") + 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") + 1, position.get("index"))));
+            lineLess = calculate(charMap.get(position.get("line") - 1).get(position.get("index")), Map.of("line", position.get("line") - 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") - 1, position.get("index"))));
+            indexPlus = calculate(charMap.get(position.get("line")).get(position.get("index") + 1), Map.of("line", position.get("line"), "index", position.get("index") + 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") + 1)));
+            indexLess = calculate(charMap.get(position.get("line")).get(position.get("index") - 1), Map.of("line", position.get("line"), "index", position.get("index") - 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") - 1)));
+        } catch (NullPointerException e) {
+            return new ArrayList<>();
+        }
+        if (character == '|') {
+            return linePlus.size() > lineLess.size() ? linePlus : lineLess;
+        }
+        if (character == '-') {
+            return indexPlus.size() > indexLess.size() ? linePlus : lineLess;
+        }
+        if (character == 'L') {
+            return lineLess.size() > indexPlus.size() ? lineLess : indexPlus;
+        }
+        if (character == 'J') {
+            return lineLess.size() > indexLess.size() ? lineLess : indexLess;
+        }
+        if (character == '7') {
+            return linePlus.size() > indexLess.size() ? linePlus : indexLess;
+        }
+        if (character == 'F') {
+            return linePlus.size() > indexPlus.size() ? linePlus : indexPlus;
+        }
+        if (character == 'S') {
+            return taken;
+        }
+        return new ArrayList<>();
+    }
+    private int maxDistance(List<String> stringList) {
+        Map<Integer, Map<Integer, Character>> charMap = new HashMap<>();
+        int sLine = 0;
+        int sIndex = 0;
+        for (int line = 0; line < stringList.size(); line++) {
+            for (int index = 0; index < stringList.get(line).length(); index++) {
+                Map<Integer, Character> mapLine = charMap.containsKey(line) ? charMap.get(line) : new HashMap<>();
+                mapLine.put(index, stringList.get(line).charAt(index));
+                charMap.put(line, mapLine);
+                if (stringList.get(line).charAt(index) == 'S') {
+                    sLine = line;
+                    sIndex = index;
+                }
+            }
+        }
+
+
+    }
     private List<Character> findLoop(List<char []> charMap, char character, int cLine, int cIndex) {
         Map<Integer, Map<Integer, Boolean>> taken = new HashMap<>();
         List<Character> loop = new ArrayList<>();
@@ -233,6 +308,7 @@ public class Day10 {
         }
         return loop.size() / 2;
     }
+
     public static void main(String[] args) throws IOException {
         URL url = Day10.class.getClassLoader().getResource("input/Day10.txt");
         assert url != null;
