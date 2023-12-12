@@ -113,7 +113,7 @@ public class Day10 {
                 }
             }
         }
-
+        return 0;
 
     }
     private List<Character> findLoop(List<char []> charMap, char character, int cLine, int cIndex) {
