@@ -43,8 +43,8 @@ public class Day10 {
     }
 
     private static class Pair {
-        private Integer line;
-        private Integer index;
+        private final Integer line;
+        private final Integer index;
         public Pair(Integer line, Integer index) {
             this.line = line;
             this.index = index;
@@ -62,16 +62,18 @@ public class Day10 {
         return list;
     }
 
-    private List<Pair> calculate(char character, Map<String, Integer> position, Map<Integer, Map<Integer, Character>> charMap, List<Pair> taken) {
+    private List<Pair> calculate(Map<String, Integer> position, Map<Integer, Map<Integer, Character>> charMap, List<Pair> taken) {
         List<Pair> linePlus;
         List<Pair> lineLess;
         List<Pair> indexPlus;
         List<Pair> indexLess;
+        char character;
         try {
-            linePlus = calculate(charMap.get(position.get("line") + 1).get(position.get("index")), Map.of("line", position.get("line") + 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") + 1, position.get("index"))));
-            lineLess = calculate(charMap.get(position.get("line") - 1).get(position.get("index")), Map.of("line", position.get("line") - 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") - 1, position.get("index"))));
-            indexPlus = calculate(charMap.get(position.get("line")).get(position.get("index") + 1), Map.of("line", position.get("line"), "index", position.get("index") + 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") + 1)));
-            indexLess = calculate(charMap.get(position.get("line")).get(position.get("index") - 1), Map.of("line", position.get("line"), "index", position.get("index") - 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") - 1)));
+            linePlus = calculate(Map.of("line", position.get("line") + 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") + 1, position.get("index"))));
+            lineLess = calculate(Map.of("line", position.get("line") - 1, "index", position.get("index")), charMap, addPair(taken, new Pair(position.get("line") - 1, position.get("index"))));
+            indexPlus = calculate(Map.of("line", position.get("line"), "index", position.get("index") + 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") + 1)));
+            indexLess = calculate(Map.of("line", position.get("line"), "index", position.get("index") - 1), charMap, addPair(taken, new Pair(position.get("line"), position.get("index") - 1)));
+            character = charMap.get(position.get("line")).get(position.get("index"));
         } catch (NullPointerException e) {
             return new ArrayList<>();
         }
@@ -113,8 +115,14 @@ public class Day10 {
                 }
             }
         }
-        return 0;
-
+        List<Pair> loop = calculate(Map.of("line", sLine - 1, "index", sIndex), charMap, new ArrayList<>());
+        List<Pair> newLoop = calculate(Map.of("line", sLine + 1, "index", sIndex), charMap, new ArrayList<>());
+        if (newLoop.size() > loop.size()) loop = newLoop;
+        newLoop = calculate(Map.of("line", sLine, "index", sIndex - 1), charMap, new ArrayList<>());
+        if (newLoop.size() > loop.size()) loop = newLoop;
+        newLoop = calculate(Map.of("line", sLine, "index", sIndex + 1), charMap, new ArrayList<>());
+        if (newLoop.size() > loop.size()) loop = newLoop;
+        return loop.size() / 2;
     }
     private List<Character> findLoop(List<char []> charMap, char character, int cLine, int cIndex) {
         Map<Integer, Map<Integer, Boolean>> taken = new HashMap<>();
@@ -316,7 +324,8 @@ public class Day10 {
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         List<String> input = bufferedReader.lines().toList();
         Day10 day10 = new Day10();
-        long ret = day10.findFurthest(input);
+//        long ret = day10.findFurthest(input);
+        long ret = day10.maxDistance(input);
         System.out.println("The return value first part: " + ret);
         /*long retTwo = day9.allPrediction(input, true);
         System.out.println("The return value second part: " + retTwo);*/
