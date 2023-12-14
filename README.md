@@ -3,7 +3,7 @@ All the problems were solved using Java in Intellij project with Gradle.
 
 To see the problems' text: [link](https://adventofcode.com/)
 
-To see the leaderboard: [link](https://adventofcode.com/2023/leaderboard/private/view/2667791)
+To see the leaderboard: [link](https://adventofcode.com/2023/leaderboard/private/view/2667791) (to login into UNI-MORE leaderboard use: 2667791-de006f7d)
 
 ## What is it?
 
@@ -13,17 +13,17 @@ You don't need a computer science background to participate - just a little prog
 
 ## Problems
 All the problems are divided into two parts. Solving the first half allows to solve the second part.
-* [Day One](https://github.com/dcfrenci/AdventOfCode2023#day-one---trebuchet) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day1.java)
-* [Day Two](https://github.com/dcfrenci/AdventOfCode2023#day-two---cube-conundrum) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day2.java)
-* [Day Three](https://github.com/dcfrenci/AdventOfCode2023#day-three---gear-ratios) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day3.java)
-* [Day Four](https://github.com/dcfrenci/AdventOfCode2023#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day4.java)
-* [Day Five](https://github.com/dcfrenci/AdventOfCode2023#day-five---if-you-give-a-seed-a-fertilizer) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day5.java)
-* [Day Six](https://github.com/dcfrenci/AdventOfCode2023#day-six---wait-for-it) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day6.java)
-* [Day Seven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day7.java)
-* [Day Eight](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day8.java)
-* [Day Nine](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day9.java)
-* [Day Ten](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-ten---pipe-maze) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day10.java)
-* [Day Eleven](https://github.com/dcfrenci/AdventOfCode2023/tree/master#day-eleven---cosmic-expansion) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day11.java)
+* [Day One](#day-one---trebuchet-) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day1.java)
+* [Day Two](#day-two---cube-conundrum-) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day2.java)
+* [Day Three](#day-three---gear-ratios-) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day3.java)
+* [Day Four](#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day4.java)
+* [Day Five](#day-five---if-you-give-a-seed-a-fertilizer) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day5.java)
+* [Day Six](#day-six---wait-for-it) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day6.java)
+* [Day Seven](#day-seven---camel-cards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day7.java)
+* [Day Eight](#day-eight---haunted-wasteland) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day8.java)
+* [Day Nine](#day-nine---mirage-maintenance) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day9.java)
+* [Day Ten](#day-ten---pipe-maze-) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day10.java)
+* [Day Eleven](#day-eleven---cosmic-expansion) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day11.java)
 * [Day Twelve](#day-twelve---hot-springs) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day12.java)
 * [Day Thirteen](#day-thirteen---point-of-incidence) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day13.java)
 * [Day Fourteen](#day-four---scratchcards) [(get solution)](https://github.com/dcfrenci/AdventOfCode2023/blob/master/src/main/java/solution/Day14.java)
@@ -1148,7 +1148,7 @@ Equipped with this information, it is your job to figure out how many different 
 
 In the first line (???.### 1,1,3), there is exactly one way separate groups of one, one, and three broken springs (in that order) can appear in that row: the first three unknown springs must be broken, then operational, then broken (#.#), making the whole row #.#.###.
 
-The second line is more interesting: .??..??...?##. 1,1,3 could be a total of four different arrangements. The last ? must always be broken (to satisfy the final contiguous group of three broken springs), and each ?? must hide exactly one of the two broken springs. (Neither ?? could be both broken springs or they would form a single contiguous group of two; if that were true, the numbers afterward would have been 2,3 instead.) Since each ?? can either be #. or .#, there are four possible arrangements of springs.
+The second line is more interesting: .??..??...?##. 1,1,3 could be a total of four different arrangements. The last ? must always be broken (to satisfy the final contiguous group of three broken springs), and each ?? must hide exactly one of the two broken springs. (Neither ?? could be both broken springs, or they would form a single contiguous group of two; if that were true, the numbers afterward would have been 2,3 instead.) Since each ?? can either be #. or .#, there are four possible arrangements of springs.
 
 The last line is actually consistent with ten different arrangements! Because the first number is 3, the first and second ? must both be . (if either were #, the first number would have to be 4 or higher). However, the remaining run of unknown spring conditions have many different ways they could hold groups of two and one broken springs:
 
@@ -1175,9 +1175,9 @@ In this example, the number of possible arrangements for each row is:
 * ????.######..#####. 1,6,5 - 4 arrangements
 * ?###???????? 3,2,1 - 10 arrangements
 
-Adding all of the possible arrangement counts together produces a total of 21 arrangements.
+Adding all the possible arrangement counts together produces a total of 21 arrangements.
 
-For each row, count all of the different arrangements of operational and broken springs that meet the given criteria. What is the sum of those counts?
+For each row, count all the different arrangements of operational and broken springs that meet the given criteria. What is the sum of those counts?
 
 --- Part Two ---
 As you look out at the field of springs, you feel like there are way more springs than the condition records list. When you examine the records, you discover that they were actually folded up this whole time!
@@ -1210,7 +1210,7 @@ In the above example, after unfolding, the number of possible arrangements for s
 * ????.######..#####. 1,6,5 - 2500 arrangements
 * ?###???????? 3,2,1 - 506250 arrangements
 
-After unfolding, adding all of the possible arrangement counts together produces 525152.
+After unfolding, adding all the possible arrangement counts together produces 525152.
 
 Unfold your condition records; what is the new sum of possible arrangement counts?
 
@@ -1349,7 +1349,7 @@ In each pattern, fix the smudge and find the different line of reflection. What 
 
 --- Part One --- 
 
-You reach the place where all of the mirrors were pointing: a massive parabolic reflector dish attached to the side of another large mountain.
+You reach the place where all the mirrors were pointing: a massive parabolic reflector dish attached to the side of another large mountain.
 
 The dish is made up of many small mirrors, but while the mirrors themselves are roughly in the shape of a parabolic reflector dish, each individual mirror seems to be pointing in slightly the wrong direction. If the dish is meant to focus light, all it's doing right now is sending it in a vague direction.
 
@@ -1357,7 +1357,7 @@ This system must be what provides the energy for the lava! If you focus the refl
 
 Upon closer inspection, the individual mirrors each appear to be connected via an elaborate system of ropes and pulleys to a large metal platform below the dish. The platform is covered in large rocks of various shapes. Depending on their position, the weight of the rocks deforms the platform, and the shape of the platform controls which ropes move and ultimately the focus of the dish.
 
-In short: if you move the rocks, you can focus the dish. The platform even has a control panel on the side that lets you tilt it in one of four directions! The rounded rocks (O) will roll when the platform is tilted, while the cube-shaped rocks (#) will stay in place. You note the positions of all of the empty spaces (.) and rocks (your puzzle input). For example:
+In short: if you move the rocks, you can focus the dish. The platform even has a control panel on the side that lets you tilt it in one of four directions! The rounded rocks (O) will roll when the platform is tilted, while the cube-shaped rocks (#) will stay in place. You note the positions of all the empty spaces (.) and rocks (your puzzle input). For example:
 
 ```
 O....#....
@@ -1372,7 +1372,7 @@ O.#..O.#.#
 #OO..#....
 ```
 
-Start by tilting the lever so all of the rocks will slide north as far as they will go:
+Start by tilting the lever so all the rocks will slide north as far as they will go:
 
 ```
 OOOO.#.O..
@@ -1404,7 +1404,7 @@ O..#.OO...  7
 #....#....  1
 ```
 
-The total load is the sum of the load caused by all of the rounded rocks. In this example, the total load is 136.
+The total load is the sum of the load caused by all the rounded rocks. In this example, the total load is 136.
 
 Tilt the platform so that the rounded rocks all roll north. Afterward, what is the total load on the north support beams?
 
