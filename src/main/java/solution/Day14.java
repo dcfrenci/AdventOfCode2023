@@ -7,44 +7,9 @@ import java.net.URL;
 import java.util.*;
 
 public class Day14 {
-    private int getLineLoad(String line) {
-        //reorder the string
-        List<String> subLines = Arrays.stream(line.split("#")).toList();
-        StringBuilder stringBuilder = new StringBuilder();
-        long count = line.chars().filter(ch -> ch == '#').count();
-        //System.out.println("count" + count);
-        for (String subLine : subLines) {
-            long number = subLine.chars().filter(ch -> ch == 'O').count();
-            stringBuilder.append(new String(new char[(int) number]).replace('\0', 'O')).append(new String(new char[subLine.length() - (int) number]).replace('\0', '.'));
-            if (count > 0) {
-                stringBuilder.append('#');
-                count--;
-            }
-        }
-        if (count > 0)
-            stringBuilder.append('#');
-        //System.out.println(stringBuilder);
-        int ret = 0;
-        for (int i = 0; i < stringBuilder.length(); i++) {
-            if (stringBuilder.charAt(i) == 'O')
-                ret += stringBuilder.length() - i;
-        }
-        return ret;
+    private long loadTotal(List<String> stringList) {
+        return load(roll(changeOrientation(stringList), true));
     }
-
-    private int loadTotal(List<String> stringList) {
-        List<String> vertical = new ArrayList<>();
-        for (int index = 0; index < stringList.get(0).length(); index++) {
-            int finalIndex = index;
-            vertical.add(stringList.stream().reduce("", (oldString, toBeAdded) -> oldString + toBeAdded.charAt(finalIndex)));
-        }
-        int ret = 0;
-        for (String verticalLine : vertical) {
-            ret += getLineLoad(verticalLine);
-        }
-        return ret;
-    }
-
     private long load(List<String> stringList) {
         int ret = 0;
         for (String string : stringList) {
@@ -55,7 +20,6 @@ public class Day14 {
         }
         return ret;
     }
-
     private List<String> roll(List<String> stringList, boolean oppose) {
         List<String> newStringList = new ArrayList<>();
         for (String vertical : stringList) {
@@ -77,7 +41,6 @@ public class Day14 {
         }
         return newStringList;
     }
-
     private List<String> changeOrientation(List<String> stringList) {
         List<String> newStringList = new ArrayList<>();
         for (int index = 0; index < stringList.get(0).length(); index++) {
@@ -86,7 +49,6 @@ public class Day14 {
         }
         return newStringList;
     }
-
     private long loadSpinTotal(List<String> stringList) {
         Map<List<String>, List<String>> cycles = new HashMap<>();
         for (int i = 0; i < 1000000000; i++) {
@@ -106,7 +68,6 @@ public class Day14 {
         }
         return load(changeOrientation(stringList));
     }
-
     public static void main(String[] args) throws IOException {
         URL url = Day14.class.getClassLoader().getResource("input/Day14.txt");
         assert url != null;
